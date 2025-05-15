@@ -6,7 +6,7 @@ use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\RestaurantController;
 use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,7 +24,8 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/menu', [HomeController::class, 'menu'])->name('menu');
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('/chefs', [HomeController::class, 'chefs'])->name('chefs');
-
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 // Reservation routes
 Route::get('/reservation', [ReservationController::class, 'index'])->name('reservation');
 Route::post('/reservation', [ReservationController::class, 'store'])->name('reservation.store');
@@ -58,4 +59,8 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/reviews', [ReviewController::class, 'adminIndex'])->name('reviews.index');
     Route::get('/reviews/{review}', [ReviewController::class, 'adminShow'])->name('reviews.show');
     Route::delete('/reviews/{review}', [ReviewController::class, 'adminDestroy'])->name('reviews.destroy');
+
+    // Contact routes
+    Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+    Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 });
