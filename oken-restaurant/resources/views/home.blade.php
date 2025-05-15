@@ -81,7 +81,7 @@
                     <div class="relative h-80">
                         <img src="{{ asset('images/chef1.jpg') }}" alt="Chef Isabella Rossi" class="w-full h-full object-cover">
                         <div class="absolute bottom-0 left-0 right-0 bg-white p-4 rounded-tl-3xl">
-                            <h3 class="text-xl font-semibold">Isabella Rossi</h3>
+                            <h3 class="text-xl font-semibold">Leonardo Rossi</h3>
                             <p class="text-gray-500">Executive Chef</p>
                         </div>
                     </div>
