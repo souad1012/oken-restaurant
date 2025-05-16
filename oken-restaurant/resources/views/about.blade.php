@@ -8,7 +8,7 @@
                 <div class="md:w-1/2 mb-8 md:mb-0">
                     <h1 class="text-3xl md:text-5xl font-bold text-white mb-6">ABOUT OKEN</h1>
                     <p class="text-gray-300 mb-6">
-                        {{ $restaurant->description }}
+                        {{ $restaurant->description ?? '' }}
                     </p>
                     <p class="text-gray-300 mb-6">
                         Our commitment to quality and authenticity has made us a favorite destination for food enthusiasts 

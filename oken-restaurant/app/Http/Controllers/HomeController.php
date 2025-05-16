@@ -22,7 +22,9 @@ class HomeController extends Controller
     public function about()
     {
         $restaurant = Restaurant::first();
-        return view('about', compact('restaurant'));
+        $mainDishes = Article::where('category', 'main')->get();
+
+        return view('about', compact('restaurant', 'mainDishes'));
     }
     
     public function menu()
