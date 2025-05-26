@@ -25,7 +25,7 @@
                     @foreach($mainDishes as $dish)
                     <div class="flex items-center mb-6">
                         <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
-                            <img src="{{ asset('images/' . $dish->image) }}" alt="{{ $dish->name }}" class="w-full h-full object-cover">
+                            <img src="{{ Storage::url($dish->image) }}" alt="{{ $dish->name }}" class="w-full h-full object-cover">
                         </div>
                         <div class="flex-1">
                             <div class="flex justify-between items-center">

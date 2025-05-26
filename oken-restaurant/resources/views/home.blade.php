@@ -43,7 +43,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 @foreach($featuredArticles as $article)
                 <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="{{ asset('images/' . $article->image) }}" alt="{{ $article->name }}" class="w-full h-64 object-cover">
+                    <img src="{{ Storage::url($article->image) }}" alt="{{ $article->name }}" class="w-full h-64 object-cover">
                     <div class="p-4">
                         <h3 class="text-xl font-semibold mb-2">{{ $article->name }}</h3>
                         <div class="flex justify-between items-center mb-2">

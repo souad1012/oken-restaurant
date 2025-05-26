@@ -43,7 +43,18 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
         'role' => 'string',
+        'is_admin' => 'boolean',
     ];
+
+    /**
+     * Get whether the user is an admin.
+     *
+     * @return bool
+     */
+    public function getIsAdminAttribute()
+    {
+        return $this->role === 'admin';
+    }
 
     /**
      * Get the reservations for the user.
